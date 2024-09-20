@@ -31,10 +31,11 @@ function App() {
             <li>Username: {userData.username}</li>
             <li>Language Code: {userData.language_code}</li>
             <li>Is Premium: {userData.is_premium ? "Yes" : "No"}</li>
+            <li>Hello</li>
           </ul>
         </>
       ) : (
-        <div>Loading...</div>
+        <div>Loading... Please Wait</div>
       )}
     </>
   );
