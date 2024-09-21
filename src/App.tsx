@@ -64,11 +64,11 @@ const App: React.FC = () => {
         <div>No user data available</div>
       )}
 
-      <h1 className="text-4xl font-bold mb-8">
+      {/* <h1 className="text-4xl font-bold mb-8">
         Jwt Authentication for Telegram Mini Apps
       </h1>
       <pre>{JSON.stringify(session, null, 2)}</pre>
-      <TelegramAuth />
+      <TelegramAuth /> */}
     </>
   );
 };
