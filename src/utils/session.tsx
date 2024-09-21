@@ -1,9 +1,7 @@
 import { jwtVerify, SignJWT } from "jose";
 import Cookies from "js-cookie";
 
-const key = new TextEncoder().encode(
-  "3e8fdbb0b8476e01df69a63b6ea162392583fbf3611b5d1bd6e8196713f82fa3"
-);
+const key = new TextEncoder().encode(import.meta.env.VITE_JWT_KEY);
 
 export const SESSION_DURATION = 60 * 60 * 1000;
 
