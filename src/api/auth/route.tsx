@@ -32,7 +32,7 @@ const TelegramAuth = () => {
         setAuthMessage(errorData.message);
       }
     } catch (error) {
-      console.error("Authentication failed:", error);
+      console.error("Authentication ed:", error);
       setAuthMessage("Authentication failed. Please try again.");
     }
   };
