@@ -2,6 +2,7 @@ import { jwtVerify, SignJWT } from "jose";
 import Cookies from "js-cookie";
 
 const key = new TextEncoder().encode(import.meta.env.VITE_JWT_KEY);
+console.log("API URL: ", import.meta.env.VITE_JWT_KEY);
 
 export const SESSION_DURATION = 60 * 60 * 1000;
 

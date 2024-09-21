@@ -36,7 +36,7 @@ export default function TelegramAuth() {
 
         if (response.ok) {
           setIsAuthenticated(true);
-          navigate("/protected"); // Use navigate instead of router.push
+          navigate("/protected"); // This navigate will now work because it's inside a <Router>
         } else {
           console.error("Authentication failed");
           setIsAuthenticated(false);
@@ -62,7 +62,7 @@ export default function TelegramAuth() {
         </>
       ) : (
         <div>
-          <p>You need to be an owner of this account</p>
+          <p>You need to authenticate to access this account</p>
           <button
             onClick={authenticateUser}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
