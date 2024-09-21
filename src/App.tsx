@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import WebApp from "@twa-dev/sdk";
-import TelegramAuth from "./components/TelegramAuth";
+// import TelegramAuth from "./components/TelegramAuth";
 import { getSession } from "./utils/session";
 
 interface UserData {
@@ -15,30 +15,30 @@ interface UserData {
 
 const App: React.FC = () => {
   const [userData, setUserData] = useState<UserData | null>(null);
-  const [session, setSession] = useState<any>(null);
+  // const [session, setSession] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
   // Fetch user data from Telegram SDK and session from your server
-  useEffect(() => {
-    const fetchSession = async () => {
-      try {
-        // Fetch session from your API or server
-        const sessionData = await getSession();
-        setSession(sessionData);
-      } catch (error) {
-        console.error("Error fetching session:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchSession = async () => {
+  //     try {
+  //       // Fetch session from your API or server
+  //       const sessionData = await getSession();
+  //       setSession(sessionData);
+  //     } catch (error) {
+  //       console.error("Error fetching session:", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    if (WebApp.initDataUnsafe.user) {
-      setUserData(WebApp.initDataUnsafe.user as UserData);
-    }
+  //   if (WebApp.initDataUnsafe.user) {
+  //     setUserData(WebApp.initDataUnsafe.user as UserData);
+  //   }
 
-    // Fetch the session data
-    fetchSession();
-  }, []);
+  //   // Fetch the session data
+  //   fetchSession();
+  // }, []);
 
   // While loading, show a loading indicator
   if (loading) {
