@@ -19,7 +19,7 @@ interface ValidationResult {
 export function validateTelegramWebAppData(
   telegramInitData: string
 ): ValidationResult {
-  const BOT_TOKEN = "7875260811:AAElNBMcJ9TjjEM56PCzdb_Bvk5Wfzmb8a0";
+  const BOT_TOKEN = "AAElNBMcJ9TjjEM56PCzdb_Bvk5Wfzmb8a0";
 
   let validatedData: ValidatedData | null = null;
   let user: User = {};
